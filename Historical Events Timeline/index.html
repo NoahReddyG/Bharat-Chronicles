@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="An interactive journey through India's rich and diverse history — from the ancient Indus Valley Civilization to modern independence. Explore key events, dynasties, and milestones that shaped the world's largest democracy." />
+  <meta name="keywords"
+    content="Indian History, Timeline, Indus Valley, Mughal Empire, British Raj, Independence, Ancient India" />
+  <meta name="author" content="IARE Web Systems Engineering" />
+  <title>Bharat Chronicles — Indian History Timeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-chakra">☸</span>
+        <span class="logo-text">Bharat<span class="accent">Chronicles</span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-filter="all">Home</a></li>
+        <li><a href="#timeline" class="nav-link" data-filter="ancient">Ancient</a></li>
+        <li><a href="#timeline" class="nav-link" data-filter="medieval">Medieval</a></li>
+        <li><a href="#timeline" class="nav-link" data-filter="colonial">Colonial</a></li>
+        <li><a href="#timeline" class="nav-link" data-filter="modern">Modern</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#facts" class="nav-link">Facts</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#resources" class="nav-link">Resources</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="mandala mandala-1"></div>
+      <div class="mandala mandala-2"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="chakra-small">☸</span> 5000+ Years of History
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">The Story of</span>
+        <span class="title-main">Bharat</span>
+        <span class="title-sub">India's Historical Journey</span>
+      </h1>
+      <p class="hero-description">
+        From the ancient banks of the Indus to the dawn of independence — explore the civilizations, empires, and
+        revolutions that forged the world's largest democracy.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-target="5000">0</span><span>+</span>
+          <span class="stat-label">Years of History</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="42">0</span><span>+</span>
+          <span class="stat-label">Key Events</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="12">0</span><span>+</span>
+          <span class="stat-label">Great Empires</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#timeline" class="btn-primary">
+          Explore Timeline <span class="btn-arrow">→</span>
+        </a>
+        <a href="#gallery" class="btn-secondary">View Gallery</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll to Explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ========== ERA OVERVIEW ========== -->
+  <section class="eras-section" id="eras">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Journey Through Time</span>
+        <h2 class="section-title">Four Great Eras</h2>
+        <p class="section-subtitle">India's history spans millennia, shaped by four transformative periods</p>
+      </div>
+      <div class="eras-grid">
+        <div class="era-card" data-era="ancient">
+          <div class="era-icon">🏛️</div>
+          <div class="era-period">3300 BCE – 600 CE</div>
+          <h3>Ancient India</h3>
+          <p>Indus Valley Civilization, Vedic Age, Mauryan & Gupta Empires — the golden foundations of Indian culture.
+          </p>
+          <div class="era-tag">Ancient</div>
+        </div>
+        <div class="era-card" data-era="medieval">
+          <div class="era-icon">🕌</div>
+          <div class="era-period">600 CE – 1700 CE</div>
+          <h3>Medieval India</h3>
+          <p>Chola dynasty, Delhi Sultanate, Vijayanagara Empire, and the magnificent Mughal era of art and
+            architecture.</p>
+          <div class="era-tag medieval">Medieval</div>
+        </div>
+        <div class="era-card" data-era="colonial">
+          <div class="era-icon">⚓</div>
+          <div class="era-period">1700 CE – 1947 CE</div>
+          <h3>Colonial Era</h3>
+          <p>European trade, the British Raj, the Great Uprising of 1857, and the dawn of the independence movement.</p>
+          <div class="era-tag colonial">Colonial</div>
+        </div>
+        <div class="era-card" data-era="modern">
+          <div class="era-icon">🇮🇳</div>
+          <div class="era-period">1947 CE – Present</div>
+          <h3>Modern India</h3>
+          <p>Independence, the Constitution, the Green Revolution, nuclear capability, and emergence as a global power.
+          </p>
+          <div class="era-tag modern">Modern</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TIMELINE ========== -->
+  <section class="timeline-section" id="timeline">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Chronological Journey</span>
+        <h2 class="section-title">Historical Timeline</h2>
+        <p class="section-subtitle">Filter events by era or search through India's remarkable history</p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all" id="filter-all">All Events</button>
+        <button class="filter-btn" data-filter="ancient" id="filter-ancient">🏛️ Ancient</button>
+        <button class="filter-btn" data-filter="medieval" id="filter-medieval">🕌 Medieval</button>
+        <button class="filter-btn" data-filter="colonial" id="filter-colonial">⚓ Colonial</button>
+        <button class="filter-btn" data-filter="modern" id="filter-modern">🇮🇳 Modern</button>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search events, empires, rulers..."
+          aria-label="Search historical events" />
+        <button class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline" id="timelineContainer">
+        <!-- Events injected by JS -->
+      </div>
+
+      <div class="no-results" id="noResults">
+        <span class="no-results-icon">🔍</span>
+        <p>No events found. Try a different search term or filter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Visual Heritage</span>
+        <h2 class="section-title">Gallery of Greatness</h2>
+        <p class="section-subtitle">Icons and symbols of India's magnificent historical legacy</p>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Gallery items injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FACTS ========== -->
+  <section class="facts-section" id="facts">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Did You Know?</span>
+        <h2 class="section-title">Fascinating Facts</h2>
+        <p class="section-subtitle">Remarkable truths about India's incredible history</p>
+      </div>
+      <div class="facts-grid" id="factsGrid">
+        <!-- Facts injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MODAL ========== -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">✕</button>
+      <div class="modal-era-badge" id="modalEraBadge"></div>
+      <div class="modal-date" id="modalDate"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <div class="modal-icon-large" id="modalIcon"></div>
+      <p class="modal-description" id="modalDescription"></p>
+      <div class="modal-significance" id="modalSignificance"></div>
+      <div class="modal-figures" id="modalFigures"></div>
+    </div>
+  </div>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Our Mission</span>
+        <h2 class="section-title">About Bharat Chronicles</h2>
+        <p class="section-subtitle">A dedicated effort to make Indian history accessible, engaging, and inspiring for
+          all</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-main">
+          <h3 class="about-heading">What is Bharat Chronicles?</h3>
+          <p>Bharat Chronicles is an interactive web application designed to bring India's extraordinary 5,000-year
+            history to life through dynamic timelines, vivid descriptions, and immersive storytelling. Built as part of
+            the <strong>Web Systems Engineering</strong> course at IARE, this project showcases modern front-end
+            technologies applied to cultural education.</p>
+          <p>From the ancient Indus Valley Civilization to India's Moon landing triumph in 2023, every event is
+            carefully documented with historical context, key figures, and its broader significance to the world.</p>
+          <h3 class="about-heading" style="margin-top:1.5rem">Our Approach</h3>
+          <ul class="about-list">
+            <li><span class="about-bullet">📚</span> <span>Chronological storytelling across four major eras: Ancient,
+                Medieval, Colonial, and Modern India</span></li>
+            <li><span class="about-bullet">🔍</span> <span>Full-text search and era-based filtering so you can find any
+                event instantly</span></li>
+            <li><span class="about-bullet">📱</span> <span>Fully responsive design — works beautifully on desktop,
+                tablet, and mobile devices</span></li>
+            <li><span class="about-bullet">♿</span> <span>Accessible markup with ARIA roles, keyboard navigation, and
+                meaningful link text</span></li>
+            <li><span class="about-bullet">⚡</span> <span>Zero external frameworks — pure HTML, CSS, and JavaScript for
+                maximum performance</span></li>
+          </ul>
+        </div>
+        <div class="about-sidebar">
+          <div class="about-card">
+            <div class="about-card-icon">🎓</div>
+            <h4>Academic Project</h4>
+            <p>Developed for the Web Systems Engineering module at the Institute of Aeronautical Engineering (IARE),
+              Hyderabad.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🌏</div>
+            <h4>Historical Coverage</h4>
+            <p>Spans 5,300+ years of Indian history — from 3300 BCE (Indus Valley) to 2024 CE (India's economic rise).
+            </p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">🛠️</div>
+            <h4>Technology Stack</h4>
+            <p>Built with semantic HTML5, modern CSS3 (custom properties, grid, flexbox), and vanilla JavaScript (ES6+).
+            </p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon">📖</div>
+            <h4>Data Sources</h4>
+            <p>Events sourced from Wikipedia, NCERT History textbooks, and established academic references on Indian
+              history.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESOURCES ========== -->
+  <section class="resources-section" id="resources">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Learn More</span>
+        <h2 class="section-title">External Resources</h2>
+        <p class="section-subtitle">Explore further with these authoritative references on Indian history and
+          civilization</p>
+      </div>
+      <div class="resources-grid">
+
+        <a href="https://en.wikipedia.org/wiki/History_of_India" target="_blank" rel="noopener noreferrer"
+          class="resource-card" aria-label="Read the History of India article on Wikipedia">
+          <div class="resource-icon">🌐</div>
+          <div class="resource-body">
+            <span class="resource-tag">Encyclopedia</span>
+            <h3>History of India — Wikipedia</h3>
+            <p>A comprehensive overview of Indian history from prehistoric times to the modern era, covering all major
+              dynasties, empires, and events.</p>
+          </div>
+          <span class="resource-arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a href="https://www.worldhistory.org/india/" target="_blank" rel="noopener noreferrer" class="resource-card"
+          aria-label="Explore India articles on World History Encyclopedia">
+          <div class="resource-icon">📖</div>
+          <div class="resource-body">
+            <span class="resource-tag">Academic</span>
+            <h3>World History Encyclopedia — India</h3>
+            <p>Peer-reviewed articles by historians covering ancient Indian civilizations, religions, trade routes, and
+              cultural exchanges with the world.</p>
+          </div>
+          <span class="resource-arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a href="https://nationalarchives.nic.in/" target="_blank" rel="noopener noreferrer" class="resource-card"
+          aria-label="Visit the National Archives of India official website">
+          <div class="resource-icon">🏛️</div>
+          <div class="resource-body">
+            <span class="resource-tag">Official</span>
+            <h3>National Archives of India</h3>
+            <p>The official repository of Government of India records. Access historical documents, manuscripts, maps,
+              and archival materials dating back centuries.</p>
+          </div>
+          <span class="resource-arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a href="https://www.isro.gov.in/" target="_blank" rel="noopener noreferrer" class="resource-card"
+          aria-label="Visit ISRO official website to learn about India's space missions">
+          <div class="resource-icon">🚀</div>
+          <div class="resource-body">
+            <span class="resource-tag">Space Agency</span>
+            <h3>ISRO — Indian Space Research Organisation</h3>
+            <p>India's national space agency — explore details of Chandrayaan, Mangalyaan, and all historic space
+              missions that put India on the global map.</p>
+          </div>
+          <span class="resource-arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a href="https://ncert.nic.in/textbook.php" target="_blank" rel="noopener noreferrer" class="resource-card"
+          aria-label="Access NCERT history textbooks for free">
+          <div class="resource-icon">📚</div>
+          <div class="resource-body">
+            <span class="resource-tag">Textbook</span>
+            <h3>NCERT History Textbooks</h3>
+            <p>Free, authoritative history textbooks by the National Council of Educational Research and Training —
+              covering ancient, medieval, and modern Indian history.</p>
+          </div>
+          <span class="resource-arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a href="https://asi.nic.in/" target="_blank" rel="noopener noreferrer" class="resource-card"
+          aria-label="Visit the Archaeological Survey of India website">
+          <div class="resource-icon">🗿</div>
+          <div class="resource-body">
+            <span class="resource-tag">Heritage</span>
+            <h3>Archaeological Survey of India</h3>
+            <p>India's premier organisation for archaeological research and preservation of cultural monuments,
+              including UNESCO World Heritage Sites.</p>
+          </div>
+          <span class="resource-arrow" aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+
+      <!-- Contact / Feedback -->
+      <div class="contact-box" id="contact">
+        <div class="contact-icon">✉️</div>
+        <h3>Get in Touch</h3>
+        <p>Have a suggestion, found an error, or want to contribute to Bharat Chronicles? We'd love to hear from you.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:contact@bharatchronicles.edu" class="contact-btn"
+            aria-label="Send an email to the Bharat Chronicles team">Send an Email ✉️</a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-btn contact-btn-outline"
+            aria-label="View the Bharat Chronicles source code on GitHub">View on GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-pattern"></div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-chakra">☸</span>
+            <span>BharatChronicles</span>
+          </div>
+          <p class="footer-tagline">Preserving the story of a civilization</p>
+          <div class="footer-chakra-row">
+            <span>🔶</span><span>☸</span><span>🔶</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#facts">Facts</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resources">Resources</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Eras</h4>
+          <ul>
+            <li><a href="#timeline">Ancient India</a></li>
+            <li><a href="#timeline">Medieval India</a></li>
+            <li><a href="#timeline">Colonial Era</a></li>
+            <li><a href="#timeline">Modern India</a></li>
+          </ul>
+        </div>
+        <div class="footer-about">
+          <h4>About</h4>
+          <p>A Web Systems Engineering project by IARE student Noah Reddy, dedicated to chronicling the rich tapestry of
+            Indian civilization.</p>
+          <p class="footer-quote">"A nation's culture resides in the hearts and souls of its people." — Mahatma Gandhi
+          </p>
+          <div class="footer-ext-links">
+            <a href="https://en.wikipedia.org/wiki/History_of_India" target="_blank" rel="noopener noreferrer"
+              aria-label="History of India on Wikipedia" class="footer-ext-link">Wikipedia ↗</a>
+            <a href="https://www.worldhistory.org/india/" target="_blank" rel="noopener noreferrer"
+              aria-label="India articles on World History Encyclopedia" class="footer-ext-link">World History ↗</a>
+            <a href="https://nationalarchives.nic.in/" target="_blank" rel="noopener noreferrer"
+              aria-label="National Archives of India" class="footer-ext-link">Archives ↗</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 BharatChronicles — IARE Web Systems Engineering Project</p>
+        <p>Jai Hind 🇮🇳</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
